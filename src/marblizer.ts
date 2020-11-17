@@ -20,11 +20,20 @@ export class Marblizer {
   public static marblizeSubscriptions(logs: SubscriptionLog[]): string[] {
     return logs.map(
       log =>
-        MarblesGlossary.TimeFrame.repeat(log.subscribedFrame / frameStep) +
-        MarblesGlossary.Subscription +
-        MarblesGlossary.TimeFrame.repeat((log.unsubscribedFrame - log.subscribedFrame) / frameStep - 1) +
-        MarblesGlossary.Unsubscription
+        this.marblizeLogEntry(log.subscribedFrame / frameStep, MarblesGlossary.Subscription) +
+        this.marblizeLogEntry(
+          (log.unsubscribedFrame - log.subscribedFrame) / frameStep - 1,
+          MarblesGlossary.Unsubscription
+        )
     );
+  }
+
+  private static marblizeLogEntry(logPoint: number, symbol: string): string {
+    if (logPoint !== Infinity) {
+      return MarblesGlossary.TimeFrame.repeat(logPoint) + symbol;
+    } else {
+      return '';
+    }
   }
 
   private static getNotificationEvents(messages: TestMessage[]) {

@@ -40,6 +40,15 @@ describe('Marblizer test', () => {
     const marble = Marblizer.marblize(sample);
     expect(marble).toEqual('---b-------e');
   });
+  
+   it('Should marblize Subscriptions without completion', () => {
+    const sample: SubscriptionLog[] = [
+     {  "subscribedFrame": 20,  "unsubscribedFrame": Infinity }
+     ];
+
+    const marble = Marblizer.marblizeSubscriptions(sample);
+    expect(marble).toEqual(['--^']);
+  });
 
   it('Should marblize TestMessages without emission (but with completion)', () => {
     const sample: TestMessage[] = [
