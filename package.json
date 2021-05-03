@@ -85,7 +85,7 @@
     "commitizen": "^4.0.2",
     "cross-var": "^1.1.0",
     "cz-conventional-changelog": "^3.0.2",
-    "gzip-size-cli": "^4.0.0",
+    "gzip-size-cli": "^5.0.0",
     "husky": "^4.0.0",
     "jest": "^26.4.2",
     "lint-staged": "^10.0.0",
