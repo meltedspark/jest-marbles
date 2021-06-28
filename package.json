@@ -75,7 +75,7 @@
     "testRegex": "/spec/.*\\.(ts|tsx|js)$"
   },
   "dependencies": {
-    "jest-diff": "24.9.0",
+    "jest-diff": "27.0.6",
     "jest-matcher-utils": "26.6.2"
   },
   "devDependencies": {
