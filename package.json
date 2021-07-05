@@ -90,7 +90,7 @@
     "jest": "^26.4.2",
     "lint-staged": "^10.0.0",
     "prettier": "^1.16.4",
-    "rxjs": "6.6.3",
+    "rxjs": "7.2.0",
     "shx": "^0.3.2",
     "standard-version": "^9.0.0",
     "strip-json-comments-cli": "^1.0.1",
